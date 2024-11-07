@@ -276,7 +276,7 @@ export default function Component() {
             <div className="relative h-[400px] md:h-[900px] max-w-[600px] w-full overflow-hidden">
               <Image
                 // src={`/${heroImage[currentImageIndex]}`}
-                src={"/heroImage.png"}
+                src={"/HeroImage.png"}
                 alt="Hero"
                 // width={600}
                 // height={400}
