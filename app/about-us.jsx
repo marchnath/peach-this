@@ -8,7 +8,7 @@ import Contact from "./contact";
 
 export default function AboutUs() {
   return (
-    <section id="about-us-section" className="mt-28 border">
+    <section id="about-us-section" className="mt-28">
       <div className="text-center w-full space-y-6 my-8">
         <h1 className="text-7xl">О НАС</h1>
         <p className="text-lg max-w-4xl mx-auto">
@@ -17,7 +17,7 @@ export default function AboutUs() {
         </p>
       </div>
 
-      <TracingBeam className="px-6 border">
+      <TracingBeam className="px-6">
         <div className="max-w-2xl mx-auto antialiased pt-4 relative">
           {dummyContent.map((item, index) => (
             <div key={`content-${index}`} className="mb-10">
