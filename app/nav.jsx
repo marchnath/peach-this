@@ -11,6 +11,7 @@ import {
   WhatsApp,
 } from "lucide-react";
 import { IoLogoWhatsapp } from "react-icons/io5";
+import Link from "next/link";
 
 const Nav = () => {
   return (
@@ -26,19 +27,32 @@ const Nav = () => {
               <Phone className="mr-2 h-4 w-4" />
               +7 (495) 888-44-88
             </p>
-            <p className="flex items-center">
+            <Link
+              className="flex items-center"
+              href="https://www.instagram.com/peach.mos?igsh=MXE3MHN3a2l6cWN5dA=="
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Instagram className="mr-2 h-4 w-4" />
               @peach.mos
-            </p>
-            <p className="flex items-center">
+            </Link>
+            <Link
+              className="flex items-center"
+              href="mailto:peachbeautymos@gmail.com"
+            >
               <Mail className="mr-2 h-4 w-4" />
               peachbeautymos@gmail.com
-            </p>
+            </Link>
 
-            <p className="flex items-center">
+            <Link
+              className="flex items-center"
+              href="https://wa.me/79691387072"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <IoLogoWhatsapp className="mr-2 h-4 w-4" />
               +7 969 138-70-72
-            </p>
+            </Link>
           </div>
         </div>
         <div className="space-y-4 max-w-96">

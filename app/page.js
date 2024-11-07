@@ -258,8 +258,8 @@ export default function Component() {
                   непревзойденный результат. */}
                 </p>
                 <Contact />
-                <div className="text-center text-gray-800">
-                  {" "}
+                <div className="text-center text-gray-800 space-y-2">
+                  <p className="text-lg">+7 (495) 888-44-88</p>
                   <p>МОСКВА, Ермолаевский переулок, 10/7</p>
                   <p>Пн-Вс 09:00-22:00</p>
                 </div>
