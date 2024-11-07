@@ -3,8 +3,8 @@ import Image from "next/image";
 
 const Contact = () => {
   return (
-    <div className="flex space-x-8 my-4 items-center">
-      <div className="">
+    <div className="flex space-x-8 my-4 items-center z-50">
+      <button className="">
         <a
           href="https://wa.me/79691387072"
           target="_blank"
@@ -12,8 +12,8 @@ const Contact = () => {
         >
           <Image src="/whatsapp.png" width={35} height={35} alt="whatsapp" />
         </a>
-      </div>
-      <div className="">
+      </button>
+      <button className="">
         <a
           href="https://www.instagram.com/peach.mos?igsh=MXE3MHN3a2l6cWN5dA=="
           target="_blank"
@@ -21,7 +21,7 @@ const Contact = () => {
         >
           <Image src="/instagram.png" width={30} height={30} alt="instagram" />
         </a>
-      </div>
+      </button>
     </div>
   );
 };

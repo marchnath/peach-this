@@ -15,7 +15,7 @@ import { Playfair_Display } from "next/font/google";
 import Nav from "./nav";
 import Contact from "./contact";
 
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import AboutUs from "./about-us";
 
 const playfairDisplay = Playfair_Display({
