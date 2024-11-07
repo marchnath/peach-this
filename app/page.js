@@ -236,14 +236,15 @@ export default function Component() {
             <span className="text-yellow-600 font-medium">Красоты</span>{" "}
           </h1> */}
               <BackgroundLines className="flex items-center justify-center max-h-[600px] w-full flex-col px-4">
-                <h2 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-900 to-neutral-700 dark:from-neutral-600 dark:to-white text-2xl md:text-4xl lg:text-8xl font-sans py-2 md:py-10 relative z-20 font-bold tracking-tight">
-                  <span className={playfairDisplay.className}>САЛОН</span>{" "}
+                <h2 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-900 to-neutral-700 dark:from-neutral-600 dark:to-white text-5xl md:text-4xl lg:text-8xl  font-sans py-2 md:py-10 relative z-20 font-bold tracking-tight">
+                  <span className={`${playfairDisplay.className}`}>САЛОН</span>{" "}
                   <br />
                   <Image
                     src={"/logo.png"}
                     alt="logo"
                     width={330}
                     height={330}
+                    // className="sm:h-[330px] sm:w-[330px] border "
                   />
                   {/* <span className="text-yellow-600"> PEACH</span> */}
                 </h2>
@@ -324,6 +325,7 @@ export default function Component() {
             />
           </section>
           <AboutUs />
+
           {/* <div className="bg-gradient-to-b from-[#fdf0e6] to-white absolute bottom-0 left-0 h-[26%] right-0 -z-10"></div> */}
           {/* About Section */}
           {/* <section className="bg-muted py-10 lg:py-16 max-w-7xl mx-auto text-gray-700">

@@ -2,6 +2,108 @@ import React from "react";
 import Nav from "../nav";
 
 const Prices = () => {
+  const priceData = [
+    {
+      section: "Укладки",
+      items: [
+        { name: "Дневная [браш] - до плеч", price: 5000 },
+        { name: "Дневная [браш] - ниже плеч", price: 5500 },
+        {
+          name: "Коктейльная [горячий инструмент / бэки] - до плеч",
+          price: 5500,
+        },
+        {
+          name: "Коктейльная [горячий инструмент / бэки] - ниже плеч",
+          price: 6000,
+        },
+        { name: "Вечерняя [пучок / хвост / плетение]", price: 8000 },
+        {
+          name: "Репетиция свадебной укладки [проработка 2-3 вариантов]",
+          price: 12000,
+        },
+      ],
+    },
+    {
+      section: "Уход",
+      items: [
+        { name: "Nashi Argan Filler", price: 7000 },
+        { name: "Nashi Argan Filler-экспресс", price: 4500 },
+        { name: "Nashi Argan базовый", price: 4500 },
+        { name: "TOKIO INKARAMI экспресс уход", price: 7500 },
+        { name: "TOKIO INKARAMI spa-уход", price: 9500 },
+        {
+          name: "TOKIO INKARAMI интенсивный уход [сушка по форме]",
+          price: 13000,
+        },
+      ],
+    },
+    {
+      section: "Стрижки",
+      items: [
+        { name: "Женская [сушка по форме]", price: 8000 },
+        { name: "Стрижка чёлки [без мытья]", price: 3000 },
+      ],
+    },
+    {
+      section: "Макияж",
+      items: [
+        { name: "Дневной", price: 5500 },
+        { name: "Вечерний", price: 7000 },
+        { name: "Тематический", price: 8000 },
+        { name: "Свадебный", price: 10000 },
+        { name: "Индивидуальный урок макияжа", price: 16000 },
+      ],
+    },
+    {
+      section: "Брови и Ресницы",
+      items: [
+        { name: "Коррекция + окрашивание бровей", price: 4500 },
+        { name: "Коррекция формы бровей", price: 2500 },
+        { name: "Окрашивание бровей", price: 2500 },
+        { name: "Окрашивание ресниц", price: 2500 },
+        { name: "Ламинирование бровей", price: 6000 },
+        { name: "Накладные ресницы [пучки]", price: 1500 },
+        { name: "Депиляция одной зоны лица", price: 1500 },
+      ],
+    },
+    {
+      section: "Ногтевой Сервис",
+      items: [
+        {
+          name: "Маникюр [аппаратный / пилочный / комбинированный]",
+          price: 3500,
+        },
+        { name: "Педикюр", price: 4700 },
+        { name: "Покрытие лак", price: 1500 },
+        { name: "Покрытие лечебным лаком", price: 1100 },
+        { name: "Покрытие гель-лак", price: 2200 },
+        { name: "Покрытие гель-лак french", price: 3600 },
+        { name: "Снятие лак", price: 600 },
+        { name: "Снятие гель-лак", price: 950 },
+        { name: "Дизайн / 1 ноготь", price: 350 },
+        { name: "Ремонт ногтевой пластины / 1 ноготь", price: 600 },
+        { name: "Укрепление гелем", price: 1500 },
+        { name: "Выравнивание ногтевой пластины", price: 850 },
+      ],
+    },
+    {
+      section: "Уход за руками и ногами",
+      items: [
+        { name: "Для рук", price: 3000 },
+        { name: "Для ног", price: 2700 },
+      ],
+    },
+    {
+      section: "УСЛУГИ ДЛЯ МУЖЧИН",
+      items: [
+        { name: "Стрижка", price: 6000 },
+        { name: "Тонирование / камуфляж седины", price: 4500 },
+        { name: "Маникюр", price: 3600 },
+        { name: "Педикюр", price: 4800 },
+      ],
+    },
+  ];
+
   return (
     <div
       style={{
@@ -21,104 +123,29 @@ const Prices = () => {
         ПРАЙС-ЛИСТ
       </div>
 
-      <div className="container mx-auto p-4">
-        {/* Укладки Section */}
-        <h2 className="text-xl md:text-3xl font-semibold mt-10 dark:text-white">
-          Укладки
-        </h2>
-        <ul className="mt-4 dark:text-neutral-200">
-          <li>Дневная [браш] - до плеч: 5000</li>
-          <li>Дневная [браш] - ниже плеч: 5500</li>
-          <li>Коктейльная [горячий инструмент / бэки] - до плеч: 5500</li>
-          <li>Коктейльная [горячий инструмент / бэки] - ниже плеч: 6000</li>
-          <li>Вечерняя [пучок / хвост / плетение]: 8000</li>
-          <li>Репетиция свадебной укладки [проработка 2-3 вариантов]: 12000</li>
-        </ul>
-
-        {/* Уход Section */}
-        <h2 className="text-xl md:text-3xl font-semibold mt-10 dark:text-white">
-          Уход
-        </h2>
-        <ul className="mt-4 dark:text-neutral-200">
-          <li>Nashi Argan Filler: 7000</li>
-          <li>Nashi Argan Filler-экспресс: 4500</li>
-          <li>Nashi Argan базовый: 4500</li>
-          <li>TOKIO INKARAMI экспресс уход: 7500</li>
-          <li>TOKIO INKARAMI spa-уход: 9500</li>
-          <li>TOKIO INKARAMI интенсивный уход [сушка по форме]: 13000</li>
-        </ul>
-
-        {/* Стрижки Section */}
-        <h2 className="text-xl md:text-3xl font-semibold mt-10 dark:text-white">
-          Стрижки
-        </h2>
-        <ul className="mt-4 dark:text-neutral-200">
-          <li>Женская [сушка по форме]: 8000</li>
-          <li>Стрижка чёлки [без мытья]: 3000</li>
-        </ul>
-
-        <h2 className="text-xl md:text-3xl font-semibold mt-10 dark:text-white">
-          Макияж
-        </h2>
-        <ul className="mt-4 dark:text-neutral-200">
-          <li>Дневной: 5500</li>
-          <li>Вечерний: 7000</li>
-          <li>Тематический: 8000</li>
-          <li>Свадебный: 10000</li>
-          <li>Индивидуальный урок макияжа: 16000</li>
-        </ul>
-
-        <h2 className="text-xl md:text-3xl font-semibold mt-10 dark:text-white">
-          Брови и Ресницы
-        </h2>
-        <ul className="mt-4 dark:text-neutral-200">
-          <li>Коррекция + окрашивание бровей: 4500</li>
-          <li>Коррекция формы бровей: 2500</li>
-          <li>Окрашивание бровей: 2500</li>
-          <li>Окрашивание ресниц: 2500</li>
-          <li>Ламинирование бровей: 6000</li>
-          <li>Накладные ресницы [пучки]: 1500</li>
-          <li>Депиляция одной зоны лица: 1500</li>
-        </ul>
-
-        <h2 className="text-xl md:text-3xl font-semibold mt-10 dark:text-white">
-          Ногтевой Сервис
-        </h2>
-        <ul className="mt-4 dark:text-neutral-200">
-          <li>Маникюр [аппаратный / пилочный / комбинированный]: 3500</li>
-          <li>Педикюр: 4700</li>
-          <li>Покрытие лак: 1500</li>
-          <li>Покрытие лечебным лаком: 1100</li>
-          <li>Покрытие гель-лак: 2200</li>
-          <li>Покрытие гель-лак french: 3600</li>
-          <li>Снятие лак: 600</li>
-          <li>Снятие гель-лак: 950</li>
-          <li>Дизайн / 1 ноготь: 350</li>
-          <li>Ремонт ногтевой пластины / 1 ноготь: 600</li>
-          <li>Укрепление гелем: 1500</li>
-          <li>Выравнивание ногтевой пластины: 850</li>
-        </ul>
-
-        {/* Уход за руками и ногами Section */}
-        <h2 className="text-xl md:text-3xl font-semibold mt-10 dark:text-white">
-          Уход
-        </h2>
-        <ul className="mt-4 dark:text-neutral-200">
-          <li>Для рук: 3000</li>
-          <li>Для ног: 2700</li>
-        </ul>
-
-        <h2 className="text-xl md:text-3xl font-semibold mt-10 dark:text-white">
-          УСЛУГИ ДЛЯ МУЖЧИН
-        </h2>
-        <ul className="mt-4 dark:text-neutral-200">
-          <li>Стрижка: 6000</li>
-          <li>Тонирование / камуфляж седины: 4500</li>
-          <li>Маникюр: 3600</li>
-          <li>Педикюр: 4800</li>
-        </ul>
-        <Nav />
+      <div className="container p-4 items-center  mx-auto max-w-[700px] w-fit">
+        {priceData.map((section, index) => (
+          <div
+            key={index}
+            className="border gap-y-4 rounded-3xl px-8 mb-8 bg-white pb-6  hover:shadow-2xl"
+          >
+            <h2 className="text-xl md:text-3xl font-semibold mt-10 dark:text-white">
+              {section.section}
+            </h2>
+            <ul className="mt-4 dark:text-neutral-200 ">
+              {section.items.map((item, idx) => (
+                <li key={idx} className="text-xl font-light  py-2">
+                  {item.name}: {item.price}
+                </li>
+              ))}
+            </ul>
+            {/* <hr className="border-2 rounded-full my-10 w-72 border-yellow-700" /> */}
+          </div>
+        ))}
       </div>
+      {/* <div className="bg-stone-800"> */}
+      <Nav />
+      {/* </div> */}
     </div>
   );
 };
