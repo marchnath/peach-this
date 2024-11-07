@@ -13,8 +13,10 @@ import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { FlipWords } from "@/components/ui/flip-words";
 import { Playfair_Display } from "next/font/google";
 import Nav from "./nav";
+import Contact from "./contact";
 
 import { Menu } from "lucide-react";
+import AboutUs from "./about-us";
 
 const playfairDisplay = Playfair_Display({
   subsets: ["latin", "cyrillic"],
@@ -78,7 +80,7 @@ export default function Component() {
 
   return (
     <div className="relative min-h-screen px-4 lg:px-0 ">
-      <BackgroundBeamsWithCollision className="border-4 border-red-400">
+      <BackgroundBeamsWithCollision className="">
         <div>
           {/* Main Navigation */}
           <nav
@@ -174,12 +176,17 @@ export default function Component() {
                 >
                   УСЛУГИ
                 </button>
-                <Link
-                  href="https://www.google.com/"
+                <button
                   className="text-lg font-medium"
+                  onClick={() => {
+                    setIsMobileMenuOpen(false);
+                    document
+                      .getElementById("about-us-section")
+                      .scrollIntoView({ behavior: "smooth" });
+                  }}
                 >
                   О НАС
-                </Link>
+                </button>
               </div>
               <Link
                 href="https://www.google.com/"
@@ -246,10 +253,16 @@ export default function Component() {
                       " Профессиональные мастера, качественный сервис и непревзойденный результат."
                     }
                   /> */}
-                  <FlipWords words={words} className="text-2xl" /> <br />
+                  <FlipWords words={words} className="text-2xl mb-6" /> <br />
                   {/* Профессиональные мастера, качественный сервис и
                   непревзойденный результат. */}
                 </p>
+                <Contact />
+                <div className="text-center text-gray-800">
+                  {" "}
+                  <p>МОСКВА, Ермолаевский переулок, 10/7</p>
+                  <p>Пн-Вс 09:00-22:00</p>
+                </div>
               </BackgroundLines>
 
               {/* <Image
@@ -310,6 +323,7 @@ export default function Component() {
               alt="circle"
             />
           </section>
+          <AboutUs />
           {/* <div className="bg-gradient-to-b from-[#fdf0e6] to-white absolute bottom-0 left-0 h-[26%] right-0 -z-10"></div> */}
           {/* About Section */}
           {/* <section className="bg-muted py-10 lg:py-16 max-w-7xl mx-auto text-gray-700">
