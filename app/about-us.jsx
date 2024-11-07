@@ -8,7 +8,7 @@ import Contact from "./contact";
 
 export default function AboutUs() {
   return (
-    <section id="about-us-section" className="mt-28">
+    <section id="about-us-section" className="mt-28 border">
       <div className="text-center w-full space-y-6 my-8">
         <h1 className="text-7xl">О НАС</h1>
         <p className="text-lg max-w-4xl mx-auto">
@@ -17,15 +17,15 @@ export default function AboutUs() {
         </p>
       </div>
 
-      <TracingBeam className="px-6">
+      <TracingBeam className="px-6 border">
         <div className="max-w-2xl mx-auto antialiased pt-4 relative">
           {dummyContent.map((item, index) => (
             <div key={`content-${index}`} className="mb-10">
-              <div className="bg-gray-100 w-fit rounded-full px-4">
+              {/* <div className="bg-gray-100 w-fit rounded-full px-4">
                 <Contact />
-              </div>
+              </div> */}
 
-              <p className={"text-xl mb-2"}>{item.title}</p>
+              <p className={"text-2xl mb-2 font-medium"}>{item.title}</p>
               <p className="mb-8"> {item.description}</p>
 
               <div className="text-sm  prose prose-sm dark:prose-invert">
