@@ -62,17 +62,17 @@ export default function Component() {
 
   return (
     <div
-    // style={{
-    //   position: "relative",
-    //   minHeight: "full",
-    //   padding: "1rem",
-    //   backgroundImage: "/bg-salon.jpg",
-    //   backgroundSize: "cover",
-    //   backgroundPosition: "center",
-    //   backgroundRepeat: "no-repeat",
-    //   backgroundColor: "rgba(255, 255, 255, 0.2)", // Adjust opacity here
-    //   backgroundBlendMode: "overlay",
-    // }}
+      style={{
+        position: "relative",
+        minHeight: "full",
+        padding: "1rem",
+        backgroundImage: "url(/salon-bg.jpg)",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundColor: "rgba(255, 255, 255, 0.7)", // Adjust opacity here
+        backgroundBlendMode: "overlay",
+      }}
     >
       <BackgroundBeamsWithCollision className="">
         <div>
