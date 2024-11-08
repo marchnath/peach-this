@@ -87,9 +87,7 @@ export default function Component() {
           md:hidden z-50 bg-background flex items-center justify-between p-4 text-gray-700
         `}
           >
-            <div className="text-3xl font-bold text-[#e5958e]">
-              <Image src="/logo.png" alt="logo" width={150} height={150} />
-            </div>
+            <Image src="/logo.png" alt="logo" width={150} height={150} />
 
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -191,9 +189,9 @@ export default function Component() {
                   О НАС
                 </button>
               </div>
-              <div className="text-3xl font-bold text-[#e5958e]">
-                <Image src="/logo.png" alt="logo" width={200} height={200} />
-              </div>
+
+              <Image src="/logo.png" alt="logo" width={200} height={200} />
+
               <div className="flex items-center space-x-8">
                 <button
                   className="text-lg font-medium"
