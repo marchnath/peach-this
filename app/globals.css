@@ -31,6 +31,17 @@
     --chart-5: 27 87% 67%;
   }
 
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    max-width: 100%;
+    overflow-x: hidden;
+    padding: 1rem;
+  }
+
   .dark {
     --background: 20 14.3% 4.1%;
     --foreground: 60 9.1% 97.8%;

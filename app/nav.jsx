@@ -17,7 +17,7 @@ const Nav = () => {
   return (
     <section
       id="contact-section"
-      className="container py-16 max-w-7xl mx-auto text-gray-700"
+      className="container py-16 max-w-7xl mx-auto text-gray-700 "
     >
       <div className="flex flex-col md:flex-row space-y-8 justify-between w-full">
         <div className="space-y-4">

@@ -69,7 +69,7 @@ export default function Component() {
             className={`
           ${
             isNavSticky
-              ? "fixed top-0 right-0 left-0 w-full animate-slideDown bg-white shadow-md"
+              ? "fixed top-0 right-0 left-0 w-full animate-slideDown bg-white z-50 shadow-md"
               : ""
           }
           md:hidden z-50 bg-background flex items-center justify-between p-4 text-gray-700
@@ -96,7 +96,7 @@ export default function Component() {
           {/* Mobile Menu Overlay */}
           {isMobileMenuOpen && (
             <div
-              className="fixed inset-0 z-40 bg-white md:hidden"
+              className="fixed z-40 w-screen h-screen bg-white md:hidden"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               <div
@@ -143,7 +143,7 @@ export default function Component() {
               ? "fixed top-0 right-0 left-0 w-full animate-slideDown bg-white shadow-md"
               : ""
           }
-          hidden md:block z-50 bg-background text-gray-700
+          hidden md:block z-50 bg-background text-gray-700 
         `}
           >
             <div className="container flex items-center justify-between py-4 max-w-7xl mx-auto">
