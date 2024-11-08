@@ -20,7 +20,7 @@ const words = [
 
 const Hero = () => {
   return (
-    <section className="hero-section">
+    <section className="">
       <div
         className="absolute -top-[10%] left-0 hidden lg:block  -z-20 w-full h-[85%] "
         style={{
@@ -38,7 +38,7 @@ const Hero = () => {
           height={350}
           alt="circle"
         />
-        <div className="relative ml-20 px-20 border">
+        <div className="relative ml-20 px-20 border hero-section">
           <div className="absolute inset-0 opacity-30"></div>
           <BackgroundLines className="flex items-center justify-center max-h-[600px] w-full flex-col px-4 relative z-10">
             <h2 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-900 to-neutral-700 dark:from-neutral-600 dark:to-white text-5xl md:text-4xl lg:text-8xl  font-sans py-2 md:py-10 relative z-20 font-bold tracking-tight">
@@ -71,7 +71,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="relative container lg:hidden py-12 max-w-7xl mx-auto border">
+      <div className="relative container lg:hidden py-12 max-w-7xl mx-auto border hero-section">
         <Image
           src="/star.svg"
           className="absolute -right-48 top-20"
@@ -79,9 +79,9 @@ const Hero = () => {
           height={350}
           alt="circle"
         />
-        <div className="relative lg:hidden w-full h-[400px] md:h-[700px] lg:h-[900px] overflow-hidden lg:items-center lg:gap-x-10 lg:flex-row">
+        <div className="relative lg:hidden w-full h-[500px]  md:h-[600px] lg:h-[900px] overflow-hidden lg:items-center lg:gap-x-10 lg:flex-row">
           <div className="absolute inset-0 flex items-center justify-center px-4 lg:static lg:w-1/2">
-            <BackgroundLines className="flex items-center justify-center max-h-[600px] w-full flex-col px-4 relative z-10">
+            <BackgroundLines className="flex items-center justify-center max-h-[600px] h-full w-full flex-col px-4 relative z-10">
               <h2 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-900 to-neutral-700 dark:from-neutral-600 dark:to-white text-5xl md:text-4xl lg:text-8xl font-sans py-2 md:py-10 relative z-20 font-bold tracking-tight">
                 <span className={`${playfairDisplay.className}`}>САЛОН</span>{" "}
                 <br />
