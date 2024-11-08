@@ -1,6 +1,7 @@
 import React from "react";
 import Nav from "../nav";
 import Image from "next/image";
+import { Link } from "lucide-react";
 
 const Prices = () => {
   const priceData = [
@@ -121,10 +122,12 @@ const Prices = () => {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="text-3xl font-bold text-[#e5958e] z-50 absolute top-2 left-2 ">
-          <Image src="/logo.png" alt="logo" width={100} height={100} />
+        <div className="text-3xl font-bold  text-[#e5958e] z-50 absolute top-2 left-2">
+          <a href="/">
+            <Image src="/logo.png" alt="logo" width={100} height={100} />
+          </a>
         </div>
-        ПРАЙС-ЛИСТ
+        <span className="mt-4"> ПРАЙС-ЛИСТ</span>
       </div>
 
       <div className="container p-2 md:p-4 items-center  mx-auto max-w-[700px] w-fit">
