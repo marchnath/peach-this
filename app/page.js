@@ -66,7 +66,7 @@ export default function Component() {
         position: "relative",
         minHeight: "full",
         padding: "1rem",
-        backgroundImage: "url('/bg-salon.jpg')",
+        backgroundImage: "/bg-salon.jpg",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
