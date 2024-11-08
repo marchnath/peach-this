@@ -111,6 +111,17 @@ export default function Component() {
                 >
                   УСЛУГИ
                 </button>
+                <button
+                  className="text-lg font-medium"
+                  onClick={() => {
+                    setIsMobileMenuOpen(false);
+                    document
+                      .getElementById("about-us-section")
+                      .scrollIntoView({ behavior: "smooth" });
+                  }}
+                >
+                  О НАС
+                </button>
 
                 <button
                   className="text-lg font-medium"
