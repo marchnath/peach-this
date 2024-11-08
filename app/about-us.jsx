@@ -72,20 +72,7 @@ const dummyContent = [
     badge: "Changelog",
     image: "/about-us/instruments.png",
   },
-  {
-    title: "Гигиена и безопасность",
-    description: (
-      <>
-        <p>
-          Строгие стандарты чистоты и дезинфекции обеспечивают максимальную
-          безопасность и комфорт для наших клиентов.
-        </p>
-      </>
-    ),
-    badge: "Launch Week",
 
-    image: "/about-us/hygiene.png",
-  },
   {
     title: "Опытные специалисты",
     description: (

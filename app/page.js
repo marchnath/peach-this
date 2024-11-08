@@ -258,27 +258,9 @@ export default function Component() {
           <Nav />
         </div>
       </BackgroundBeamsWithCollision>
-      <style jsx>{`
-        .hero-section {
-          position: relative;
-          overflow: hidden;
-        }
+      {/* <style jsx>{`
 
-        .hero-section::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background-image: url("/bg-salon.jpg");
-          background-size: cover;
-          background-position: center;
-          background-repeat: no-repeat;
-          opacity: 0.1; /* Adjust the opacity here */
-          z-index: -1;
-        }
-      `}</style>
+      `}</style> */}
     </div>
   );
 }
