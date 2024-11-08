@@ -96,7 +96,7 @@ export default function Component() {
           {/* Mobile Menu Overlay */}
           {isMobileMenuOpen && (
             <div
-              className="fixed z-40 w-screen h-screen bg-white md:hidden"
+              className="fixed z-40 w-screen inset-0 h-screen bg-white md:hidden"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               <div
@@ -118,6 +118,7 @@ export default function Component() {
                 <button
                   className="text-lg font-medium"
                   onClick={() => {
+                    setIsMobileMenuOpen(false);
                     document
                       .getElementById("contact-section")
                       .scrollIntoView({ behavior: "smooth" });

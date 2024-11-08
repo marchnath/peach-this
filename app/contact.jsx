@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Contact = () => {
   return (
-    <div className="flex space-x-8 my-4 items-center z-50">
+    <div className="flex space-x-8 my-4 items-center z-30">
       <button className="">
         <a
           href="https://wa.me/79691387072"
