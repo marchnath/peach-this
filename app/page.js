@@ -61,7 +61,7 @@ export default function Component() {
   ];
 
   return (
-    <div className="relative min-h-screen px-4 lg:px-0 ">
+    <div className="relative min-h-screen px-4 lg:px-0 hero-section ">
       <BackgroundBeamsWithCollision className="">
         <div>
           {/* Main Navigation */}
@@ -258,6 +258,27 @@ export default function Component() {
           <Nav />
         </div>
       </BackgroundBeamsWithCollision>
+      <style jsx>{`
+        .hero-section {
+          position: relative;
+          overflow: hidden;
+        }
+
+        .hero-section::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-image: url("/bg-salon.jpg");
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          opacity: 0.1; /* Adjust the opacity here */
+          z-index: -1;
+        }
+      `}</style>
     </div>
   );
 }
