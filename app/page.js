@@ -75,12 +75,9 @@ export default function Component() {
           md:hidden z-50 bg-background flex items-center justify-between p-4 text-gray-700
         `}
           >
-            <Link
-              href="https://www.google.com/"
-              className="text-3xl font-bold text-[#e5958e]"
-            >
+            <div className="text-3xl font-bold text-[#e5958e]">
               <Image src="/logo.png" alt="logo" width={150} height={150} />
-            </Link>
+            </div>
 
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -171,12 +168,9 @@ export default function Component() {
                   О НАС
                 </button>
               </div>
-              <Link
-                href="https://www.google.com/"
-                className="text-3xl font-bold text-[#e5958e]"
-              >
+              <div className="text-3xl font-bold text-[#e5958e]">
                 <Image src="/logo.png" alt="logo" width={200} height={200} />
-              </Link>
+              </div>
               <div className="flex items-center space-x-8">
                 <button
                   className="text-lg font-medium"
@@ -222,7 +216,9 @@ export default function Component() {
                         {category.name}
                       </h3>
                       <Link
-                        href="https://www.google.com/"
+                        href="https://www.instagram.com/peach.mos?igsh=MXE3MHN3a2l6cWN5dA=="
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="border border-white px-6 py-2 text-sm transition-colors hover:bg-white hover:text-black"
                       >
                         ПОДРОБНЕЕ

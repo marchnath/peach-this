@@ -39,7 +39,6 @@
     color: hsl(var(--foreground));
     max-width: 100vw;
     overflow-x: hidden;
-    padding: 1rem;
   }
 
   .dark {

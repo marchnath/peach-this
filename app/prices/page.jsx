@@ -1,5 +1,6 @@
 import React from "react";
 import Nav from "../nav";
+import Image from "next/image";
 
 const Prices = () => {
   const priceData = [
@@ -113,28 +114,34 @@ const Prices = () => {
       }}
     >
       <div
-        className="h-52 w-full text-white flex items-center justify-center text-center text-7xl sticky top-0 z-10"
+        className="h-24 md:h-52 w-full  text-white flex items-center justify-center text-center text-3xl md:text-4xl lg:text-6xl sticky top-0 z-10"
         style={{
           backgroundImage: "url('/banner2.png')",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
         }}
       >
+        <div className="text-3xl font-bold text-[#e5958e] z-50 absolute top-2 left-2 ">
+          <Image src="/logo.png" alt="logo" width={100} height={100} />
+        </div>
         ПРАЙС-ЛИСТ
       </div>
 
-      <div className="container p-4 items-center  mx-auto max-w-[700px] w-fit">
+      <div className="container p-2 md:p-4 items-center  mx-auto max-w-[700px] w-fit">
         {priceData.map((section, index) => (
           <div
             key={index}
-            className="border gap-y-4 rounded-3xl px-8 mb-8 bg-white pb-6  hover:shadow-2xl"
+            className="border gap-y-4 rounded-xl px-6 md:px-8 mb-8 bg-white pb-6  hover:shadow-2xl"
           >
             <h2 className="text-xl md:text-3xl font-semibold mt-10 dark:text-white">
               {section.section}
             </h2>
             <ul className="mt-4 dark:text-neutral-200 ">
               {section.items.map((item, idx) => (
-                <li key={idx} className="text-xl font-light  py-2">
+                <li
+                  key={idx}
+                  className="sm:text-md md:text-xl font-light  py-2"
+                >
                   {item.name}: {item.price}
                 </li>
               ))}
