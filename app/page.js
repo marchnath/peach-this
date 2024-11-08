@@ -61,7 +61,19 @@ export default function Component() {
   ];
 
   return (
-    <div className="relative min-h-screen px-4 lg:px-0 hero-section ">
+    <div
+      style={{
+        position: "relative",
+        minHeight: "full",
+        padding: "1rem",
+        backgroundImage: "url('/bg-salon.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundColor: "rgba(255, 255, 255, 0.8)", // Adjust opacity here
+        backgroundBlendMode: "overlay",
+      }}
+    >
       <BackgroundBeamsWithCollision className="">
         <div>
           {/* Main Navigation */}
