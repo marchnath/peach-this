@@ -46,16 +46,16 @@ const Hero = () => {
               <br />
               <Image src={"/logo.png"} alt="logo" width={330} height={330} />
             </h2>
-            <p className="max-w-xl mx-auto text-sm md:text-xl text-neutral-700 dark:text-neutral-400 text-center">
+            <div className="max-w-xl mx-auto text-sm md:text-xl text-neutral-700 dark:text-neutral-400 text-center">
               <FlipWords words={words} className="text-2xl mb-6" /> <br />
-            </p>
+            </div>
             <Contact />
             <div className="text-center text-gray-800 space-y-2">
               <p className="text-lg">+7 (495) 888-44-88</p>
-              <p>
+              <div>
                 <p className="text-lg"> Город МОСКВА</p>
-                Патриаршие пруды Ермолаевский переулок 10/7
-              </p>
+                <p>Патриаршие пруды Ермолаевский переулок 10/7</p>
+              </div>
               <p>Пн-Вс 09:00-22:00</p>
             </div>
           </BackgroundLines>
@@ -87,16 +87,16 @@ const Hero = () => {
                 <br />
                 <Image src="/logo.png" alt="logo" width={330} height={330} />
               </h2>
-              <p className="max-w-xl mx-auto text-sm md:text-xl text-neutral-700 dark:text-neutral-400 text-center">
+              <div className="max-w-xl mx-auto text-sm md:text-xl text-neutral-700 dark:text-neutral-400 text-center">
                 <FlipWords words={words} className="sm:text-2xl mb-6" /> <br />
-              </p>
+              </div>
               <Contact />
               <div className="text-center text-gray-800 space-y-2 z-20">
                 <p className="text-lg">+7 (495) 888-44-88</p>
-                <p>
+                <div>
                   <p className="text-lg"> Город МОСКВА</p>
-                  Патриаршие пруды Ермолаевский переулок 10/7
-                </p>
+                  <p> Патриаршие пруды Ермолаевский переулок 10/7</p>
+                </div>
                 <p>Пн-Вс 09:00-22:00</p>
               </div>
             </BackgroundLines>

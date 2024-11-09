@@ -25,8 +25,8 @@ export default function AboutUs() {
                 <Contact />
               </div> */}
 
-              <p className="text-2xl mb-2 font-medium">{item.title}</p>
-              <p className="mb-8">{item.description}</p>
+              <span className="text-2xl mb-2 font-medium">{item.title}</span>
+              <div className="mb-8">{item.description}</div>
 
               <div className=" mx-auto w-full overflow-hidden">
                 {item?.image && (

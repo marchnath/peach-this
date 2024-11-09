@@ -1,3 +1,5 @@
+//page.js
+
 "use client";
 
 import { useEffect, useState } from "react";
@@ -62,23 +64,23 @@ export default function Component() {
 
   return (
     <div
-      style={{
-        position: "relative",
-        minHeight: "full",
-        padding: "1rem",
-        backgroundImage: "url(/salon-bg.jpg)",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        backgroundColor: "rgba(255, 255, 255, 0.7)", // Adjust opacity here
-        backgroundBlendMode: "overlay",
-      }}
+    // style={{
+    //   position: "relative",
+    //   minHeight: "full",
+    //   padding: "1rem",
+    //   backgroundImage: "url(/salon-bg.jpg)",
+    //   backgroundSize: "cover",
+    //   backgroundPosition: "center",
+    //   backgroundRepeat: "no-repeat",
+    //   backgroundColor: "rgba(255, 255, 255, 0.7)", // Adjust opacity here
+    //   backgroundBlendMode: "overlay",
+    // }}
     >
-      <BackgroundBeamsWithCollision className="">
-        <div>
-          {/* Main Navigation */}
-          <nav
-            className={`
+      {/* <BackgroundBeamsWithCollision className=""> */}
+      <div>
+        {/* Main Navigation */}
+        <nav
+          className={`
           ${
             isNavSticky
               ? "fixed top-0 right-0 left-0 w-full animate-slideDown bg-white z-50 shadow-md"
@@ -86,77 +88,77 @@ export default function Component() {
           }
           md:hidden z-50 bg-background flex items-center justify-between p-4 text-gray-700
         `}
+        >
+          <Image src="/logo.png" alt="logo" width={150} height={150} />
+
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="z-50"
           >
-            <Image src="/logo.png" alt="logo" width={150} height={150} />
-
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="z-50"
-            >
-              {isMobileMenuOpen ? (
-                <X className="h-6 w-6" />
-              ) : (
-                <Menu className="h-6 w-6" />
-              )}
-            </button>
-          </nav>
-          {/* Mobile Menu Overlay */}
-          {isMobileMenuOpen && (
+            {isMobileMenuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
+          </button>
+        </nav>
+        {/* Mobile Menu Overlay */}
+        {isMobileMenuOpen && (
+          <div
+            className="fixed z-40 w-screen inset-0 h-screen bg-white md:hidden"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
             <div
-              className="fixed z-40 w-screen inset-0 h-screen bg-white md:hidden"
-              onClick={() => setIsMobileMenuOpen(false)}
+              className="flex flex-col items-center justify-center h-full space-y-6"
+              onClick={(e) => e.stopPropagation()}
             >
-              <div
-                className="flex flex-col items-center justify-center h-full space-y-6"
-                onClick={(e) => e.stopPropagation()}
+              <button
+                className="text-lg font-medium"
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  document
+                    .getElementById("services-section")
+                    .scrollIntoView({ behavior: "smooth" });
+                }}
               >
-                <button
-                  className="text-lg font-medium"
-                  onClick={() => {
-                    setIsMobileMenuOpen(false);
-                    document
-                      .getElementById("services-section")
-                      .scrollIntoView({ behavior: "smooth" });
-                  }}
-                >
-                  УСЛУГИ
-                </button>
-                <button
-                  className="text-lg font-medium"
-                  onClick={() => {
-                    setIsMobileMenuOpen(false);
-                    document
-                      .getElementById("about-us-section")
-                      .scrollIntoView({ behavior: "smooth" });
-                  }}
-                >
-                  О НАС
-                </button>
+                УСЛУГИ
+              </button>
+              <button
+                className="text-lg font-medium"
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  document
+                    .getElementById("about-us-section")
+                    .scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                О НАС
+              </button>
 
-                <button
-                  className="text-lg font-medium"
-                  onClick={() => {
-                    setIsMobileMenuOpen(false);
-                    document
-                      .getElementById("contact-section")
-                      .scrollIntoView({ behavior: "smooth" });
-                  }}
-                >
-                  КОНТАКТЫ
-                </button>
-                <Link
-                  href="/prices"
-                  className="text-lg font-medium"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  ПРАЙС
-                </Link>
-              </div>
+              <button
+                className="text-lg font-medium"
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  document
+                    .getElementById("contact-section")
+                    .scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                КОНТАКТЫ
+              </button>
+              <Link
+                href="/prices"
+                className="text-lg font-medium"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                ПРАЙС
+              </Link>
             </div>
-          )}
-          {/* Desktop Navigation */}
-          <nav
-            className={`
+          </div>
+        )}
+        {/* Desktop Navigation */}
+        <nav
+          className={`
           ${
             isNavSticky
               ? "fixed top-0 right-0 left-0 w-full animate-slideDown bg-white shadow-md"
@@ -164,110 +166,108 @@ export default function Component() {
           }
           hidden md:block z-50 bg-background text-gray-700 
         `}
-          >
-            <div className="container flex items-center justify-between py-4 max-w-7xl mx-auto">
-              <div className="flex items-center space-x-8">
-                <button
-                  className="text-lg font-medium"
-                  onClick={() => {
-                    document
-                      .getElementById("services-section")
-                      .scrollIntoView({ behavior: "smooth" });
-                  }}
-                >
-                  УСЛУГИ
-                </button>
-                <button
-                  className="text-lg font-medium"
-                  onClick={() => {
-                    setIsMobileMenuOpen(false);
-                    document
-                      .getElementById("about-us-section")
-                      .scrollIntoView({ behavior: "smooth" });
-                  }}
-                >
-                  О НАС
-                </button>
-              </div>
-
-              <Image src="/logo.png" alt="logo" width={200} height={200} />
-
-              <div className="flex items-center space-x-8">
-                <button
-                  className="text-lg font-medium"
-                  onClick={() => {
-                    document
-                      .getElementById("contact-section")
-
-                      .scrollIntoView({ behavior: "smooth" });
-                  }}
-                >
-                  КОНТАКТЫ
-                </button>
-                <Link href="/prices" className="text-lg font-medium">
-                  ПРАЙС
-                </Link>
-              </div>
-            </div>
-          </nav>
-          {/* Hero Section */}
-          <Hero />
-
-          {/* Services Grid */}
-          <section
-            id="services-section"
-            className="container relative mx-auto px-4 py-8"
-          >
-            <div className="flex justify-center">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center">
-                {categories.map((category) => (
-                  <BackgroundGradient
-                    key={category.name}
-                    className="relative rounded-[22px] h-[400px]  w-80  p-4 sm:p-10 bg-white dark:bg-zinc-900"
-                  >
-                    <Image
-                      src={category.image}
-                      alt={category.name}
-                      layout="fill"
-                      objectFit="cover"
-                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/40 p-4 text-white">
-                      <h3 className="mb-4 text-2xl font-bold">
-                        {category.name}
-                      </h3>
-                      <a
-                        href="https://www.instagram.com/peach.mos?igsh=MXE3MHN3a2l6cWN5dA=="
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="border border-white px-6 py-2 text-sm transition-colors hover:bg-white hover:text-black"
-                      >
-                        ПОДРОБНЕЕ
-                      </a>
-                    </div>
-                  </BackgroundGradient>
-                ))}
-              </div>
+        >
+          <div className="container flex items-center justify-between py-4 max-w-7xl mx-auto">
+            <div className="flex items-center space-x-8">
+              <button
+                className="text-lg font-medium"
+                onClick={() => {
+                  document
+                    .getElementById("services-section")
+                    .scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                УСЛУГИ
+              </button>
+              <button
+                className="text-lg font-medium"
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  document
+                    .getElementById("about-us-section")
+                    .scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                О НАС
+              </button>
             </div>
 
-            <Image
-              src="/star.svg"
-              className="absolute -left-48 bottom-20 hidden lg:block"
-              width={350}
-              height={350}
-              alt="circle"
-            />
-          </section>
+            <Image src="/logo.png" alt="logo" width={200} height={200} />
 
-          <AboutUs />
+            <div className="flex items-center space-x-8">
+              <button
+                className="text-lg font-medium"
+                onClick={() => {
+                  document
+                    .getElementById("contact-section")
 
-          {/* Reviews Section */}
-          <MarqueeDemo />
-          {/* Contact Section */}
+                    .scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                КОНТАКТЫ
+              </button>
+              <Link href="/prices" className="text-lg font-medium">
+                ПРАЙС
+              </Link>
+            </div>
+          </div>
+        </nav>
+        {/* Hero Section */}
+        <Hero />
 
-          <Nav />
-        </div>
-      </BackgroundBeamsWithCollision>
+        {/* Services Grid */}
+        <section
+          id="services-section"
+          className="container relative mx-auto px-4 py-8"
+        >
+          <div className="flex justify-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center">
+              {categories.map((category) => (
+                <BackgroundGradient
+                  key={category.name}
+                  className="relative rounded-[22px] h-[400px]  w-80  p-4 sm:p-10 bg-white dark:bg-zinc-900"
+                >
+                  <Image
+                    src={category.image}
+                    alt={category.name}
+                    layout="fill"
+                    objectFit="cover"
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/40 p-4 text-white">
+                    <h3 className="mb-4 text-2xl font-bold">{category.name}</h3>
+                    <a
+                      href="https://www.instagram.com/peach.mos?igsh=MXE3MHN3a2l6cWN5dA=="
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="border border-white px-6 py-2 text-sm transition-colors hover:bg-white hover:text-black"
+                    >
+                      ПОДРОБНЕЕ
+                    </a>
+                  </div>
+                </BackgroundGradient>
+              ))}
+            </div>
+          </div>
+
+          <Image
+            src="/star.svg"
+            className="absolute -left-48 bottom-20 hidden lg:block"
+            width={350}
+            height={350}
+            alt="circle"
+          />
+        </section>
+
+        <AboutUs />
+
+        {/* Reviews Section */}
+        <MarqueeDemo />
+        {/* Contact Section */}
+
+        <Nav />
+      </div>
+      {/* </BackgroundBeamsWithCollision> */}
       {/* <style jsx>{`
 
       `}</style> */}
