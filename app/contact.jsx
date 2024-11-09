@@ -13,15 +13,13 @@ const Contact = () => {
           <Image src="/whatsapp.png" width={35} height={35} alt="whatsapp" />
         </a>
       </button>
-      <button className="">
-        <a
-          href="https://www.instagram.com/peach.mos?igsh=MXE3MHN3a2l6cWN5dA=="
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image src="/instagram.png" width={30} height={30} alt="instagram" />
-        </a>
-      </button>
+      <a
+        href="https://www.instagram.com/peach.mos?igsh=MXE3MHN3a2l6cWN5dA=="
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Image src="/instagram.png" width={30} height={30} alt="instagram" />
+      </a>
     </div>
   );
 };
