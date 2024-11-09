@@ -236,14 +236,14 @@ export default function Component() {
                       <h3 className="mb-4 text-2xl font-bold">
                         {category.name}
                       </h3>
-                      <Link
+                      <a
                         href="https://www.instagram.com/peach.mos?igsh=MXE3MHN3a2l6cWN5dA=="
                         target="_blank"
                         rel="noopener noreferrer"
                         className="border border-white px-6 py-2 text-sm transition-colors hover:bg-white hover:text-black"
                       >
                         ПОДРОБНЕЕ
-                      </Link>
+                      </a>
                     </div>
                   </BackgroundGradient>
                 ))}
