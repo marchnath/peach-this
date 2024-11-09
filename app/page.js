@@ -237,7 +237,7 @@ export default function Component() {
                   <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/40 p-4 text-white">
                     <h3 className="mb-4 text-2xl font-bold">{category.name}</h3>
                     <a
-                      href="https://www.instagram.com/peach.mos?igsh=MXE3MHN3a2l6cWN5dA=="
+                      href="https://www.instagram.com/peach.mos/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="border border-white px-6 py-2 text-sm transition-colors hover:bg-white hover:text-black"
