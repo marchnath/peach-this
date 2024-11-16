@@ -1,11 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Playfair_Display } from "next/font/google";
 import Image from "next/image";
-
-const playfairDisplay = Playfair_Display({
-  subsets: ["latin", "cyrillic"],
-  weight: "400",
-});
+import { TiStarburst } from "react-icons/ti";
 
 export default function Hero2() {
   return (
@@ -32,14 +28,14 @@ export default function Hero2() {
             на Патриарших прудах!
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-8">
-            <span className="bg-white px-4 py-2 rounded-full text-gray-800 border">
-              ногтевой сервис
+            <span className="flex items-center gap-x-2">
+              <TiStarburst className="text-[#866f43]" /> Ногтевой сервис
             </span>
-            <span className="bg-white px-4 py-2 rounded-full text-gray-800 border">
-              макияж
+            <span className="flex items-center gap-x-2">
+              <TiStarburst className="text-[#866f43]" /> Макияж
             </span>
-            <span className="bg-white px-4 py-2 rounded-full text-gray-800 border">
-              парикмахерские услуги
+            <span className="flex items-center gap-x-2">
+              <TiStarburst className="text-[#866f43]" /> Парикмахерские услуги
             </span>
           </div>
           <p className="text-lg sm:text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
