@@ -40,25 +40,8 @@ const Hero = () => {
         />
         <div className="relative ml-20 px-20 border hero-section">
           <div className="absolute inset-0 opacity-30"></div>
-          <BackgroundLines className="flex items-center justify-center max-h-[600px] w-full flex-col px-4 relative z-10">
-            <h2 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-900 to-neutral-700 dark:from-neutral-600 dark:to-white text-5xl md:text-4xl lg:text-8xl  font-sans py-2 md:py-10 relative z-20 font-bold tracking-tight">
-              <span className={`${playfairDisplay.className}`}>САЛОН</span>{" "}
-              <br />
-              <Image src={"/logo.png"} alt="logo" width={330} height={330} />
-            </h2>
-            <div className="max-w-xl mx-auto text-sm md:text-xl text-neutral-700 dark:text-neutral-400 text-center">
-              <FlipWords words={words} className="text-2xl mb-6" /> <br />
-            </div>
-            <Contact />
-            <div className="text-center text-gray-800 space-y-2">
-              <p className="text-lg">+7 (495) 888-44-88</p>
-              <div>
-                <p className="text-lg"> Город МОСКВА</p>
-                <p>Патриаршие пруды Ермолаевский переулок 10/7</p>
-              </div>
-              <p>Пн-Вс 09:00-22:00</p>
-            </div>
-          </BackgroundLines>
+
+          <div></div>
         </div>
         <div className="relative h-[400px] md:h-[900px] max-w-[600px] w-full overflow-hidden">
           <Image

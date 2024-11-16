@@ -33,7 +33,7 @@ const Services = () => {
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
               <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/40 p-4 text-white">
-                <h3 className="mb-4 text-2xl font-bold">{category.name}</h3>
+                <h3 className="mb-4 text-xl font-bold">{category.name}</h3>
                 <a
                   href="https://www.instagram.com/peach.mos/"
                   target="_blank"

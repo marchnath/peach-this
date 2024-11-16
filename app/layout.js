@@ -1,8 +1,18 @@
 import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
-// import Nav from "./nav";
 
 const inter = Inter({ subsets: ["latin"] });
+
+const trajan = localFont({
+  src: "../public/ofont.ru_Trajan.ttf", // Adjust path based on your file name
+  variable: "--font-trajan",
+});
+
+const nexaLight = localFont({
+  src: "../public/Nexa_Light.otf", // Adjust path based on your file name
+  variable: "--font-nexa-light",
+});
 
 export const metadata = {
   title: "Peach Beauty Salon",
@@ -12,7 +22,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${trajan.variable} ${nexaLight.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }

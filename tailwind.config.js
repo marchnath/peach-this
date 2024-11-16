@@ -24,6 +24,10 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        trajan: ["var(--font-trajan)"],
+        "nexa-light": ["var(--font-nexa-light)"],
+      },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",

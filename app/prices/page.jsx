@@ -2,6 +2,7 @@ import React from "react";
 import Nav from "../nav";
 import Image from "next/image";
 import { Link } from "lucide-react";
+import Button from "../button";
 
 const Prices = () => {
   const priceData = [
@@ -26,7 +27,7 @@ const Prices = () => {
       ],
     },
     {
-      section: "Уход",
+      section: "Уход для волос",
       items: [
         { name: "Nashi Argan Filler", price: 7000 },
         { name: "Nashi Argan Filler-экспресс", price: 4500 },
@@ -91,8 +92,8 @@ const Prices = () => {
     {
       section: "Уход за руками и ногами",
       items: [
-        { name: "Для рук", price: 3000 },
-        { name: "Для ног", price: 2700 },
+        { name: "Уход для рук Oribe", price: 3000 },
+        { name: "Уход для ног Oribe", price: 2700 },
       ],
     },
     {
@@ -155,6 +156,7 @@ const Prices = () => {
       </div>
       {/* <div className="bg-stone-800"> */}
       <Nav />
+      <Button />
       {/* </div> */}
     </div>
   );
