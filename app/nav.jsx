@@ -29,7 +29,7 @@ const Nav = () => {
             </p>
             <Link
               className="flex items-center"
-              href="https://www.instagram.com/peach.mos?igsh=MXE3MHN3a2l6cWN5dA=="
+              href="https://www.instagram.com/peach.mos/"
               target="_blank"
               rel="noopener noreferrer"
             >
