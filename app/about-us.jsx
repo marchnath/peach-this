@@ -76,7 +76,7 @@ const dummyContent = [
       </>
     ),
     badge: "Changelog",
-    image: "/about-us/instruments.png",
+    image: "/about-us/instruments.jpg",
   },
 
   {
@@ -93,7 +93,7 @@ const dummyContent = [
     ),
     badge: "New Features",
 
-    image: "/about-us/professionals.png",
+    image: "/about-us/team.jpg",
   },
   {
     title: "Уникальность салона Peach",
@@ -108,6 +108,6 @@ const dummyContent = [
       </>
     ),
 
-    image: "/about-us/support.png",
+    image: "/about-us/uniqueness.png",
   },
 ];
