@@ -4,12 +4,12 @@ import Image from "next/image";
 
 const Services = () => {
   const categories = [
-    { name: "ВОЛОСЫ", image: "/hair.jpg" },
-    { name: "НОГТЕВОЙ СЕРВИС", image: "/nails.jpg" },
-    { name: "БРОВИ И РЕСНИЦЫ", image: "/eye_brow.jpg" },
-    { name: "МАКИЯЖ", image: "/make_up.jpg" },
+    { name: "ВОЛОСЫ", image: "/hair.JPG" },
+    { name: "НОГТЕВОЙ СЕРВИС", image: "/nails.JPG" },
+    { name: "БРОВИ И РЕСНИЦЫ", image: "/eye_brow.JPG" },
+    { name: "МАКИЯЖ", image: "/make_up.JPG" },
 
-    { name: "ДЛЯ МУЖЧИН", image: "/for_men.jpg" },
+    { name: "ДЛЯ МУЖЧИН", image: "/for_men.JPG" },
     // { name: "ДЛЯ ДЕТЕЙ", image: "/children.png?height=600&width=400" },
   ];
 
