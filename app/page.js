@@ -1,51 +1,50 @@
-//page.js
-
 "use client";
-
+import React, { useState, useEffect } from "react";
 import { MarqueeDemo } from "./reviews";
-
 import Fotter from "./fotter";
-
 import Nav from "./nav";
-
 import AboutUs from "./about-us";
 import Services from "./services";
 import Hero2 from "./hero2";
 import Button from "./button";
 
 export default function Component() {
+  const [isNavLoaded, setIsNavLoaded] = useState(false);
+  const [isHeroLoaded, setIsHeroLoaded] = useState(false);
+
+  useEffect(() => {
+    const navTimer = setTimeout(() => {
+      setIsNavLoaded(true);
+    }, 500); // Delay for Nav
+
+    const heroTimer = setTimeout(() => {
+      setIsHeroLoaded(true);
+    }, 500); // Delay for Hero
+
+    return () => {
+      clearTimeout(navTimer);
+      clearTimeout(heroTimer);
+    };
+  }, []);
+
   return (
-    <div
-    // style={{
-    //   position: "relative",
-    //   minHeight: "full",
-    //   padding: "1rem",
-    //   backgroundImage: "url(/salon-bg.jpg)",
-    //   backgroundSize: "cover",
-    //   backgroundPosition: "center",
-    //   backgroundRepeat: "no-repeat",
-    //   backgroundColor: "rgba(255, 255, 255, 0.7)", // Adjust opacity here
-    //   backgroundBlendMode: "overlay",
-    // }}
-    >
-      {/* <BackgroundBeamsWithCollision className=""> */}
+    <div>
       <div>
-        <Nav />
+        {isNavLoaded && <Nav />}
         {/* Hero Section */}
         {/* <Hero /> */}
-        <Hero2 />
+        {isHeroLoaded && <Hero2 />}
 
-        <Services />
-
-        <AboutUs />
+        {isHeroLoaded && <Services />}
+        {isHeroLoaded && <AboutUs />}
 
         {/* Reviews Section */}
-        <MarqueeDemo />
+        {isHeroLoaded && <MarqueeDemo />}
         {/* Contact Section */}
 
-        <Fotter />
+        {isHeroLoaded && <Fotter />}
       </div>
-      <Button />
+      {isHeroLoaded && <Button />}
     </div>
   );
 }
