@@ -1,5 +1,5 @@
 import React from "react";
-import Nav from "../nav";
+import Fotter from "../fotter";
 import Image from "next/image";
 import { Link } from "lucide-react";
 import Button from "../button";
@@ -155,7 +155,7 @@ const Prices = () => {
         ))}
       </div>
       {/* <div className="bg-stone-800"> */}
-      <Nav />
+      <Fotter />
       <Button />
       {/* </div> */}
     </div>

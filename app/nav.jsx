@@ -1,71 +1,160 @@
+"use client";
 import React from "react";
-import {
-  MapPin,
-  ShoppingCart,
-  X,
-  Instagram,
-  Facebook,
-  Phone,
-  Menu,
-  Mail,
-  WhatsApp,
-} from "lucide-react";
-import { IoLogoWhatsapp } from "react-icons/io5";
+import { Menu, X } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
-
+import { useState, useEffect } from "react";
 const Nav = () => {
-  return (
-    <section
-      id="contact-section"
-      className="container py-16 max-w-7xl mx-auto text-gray-700 "
-    >
-      <div className="flex flex-col md:flex-row space-y-8 justify-between w-full">
-        <div className="space-y-4">
-          <h3 className="text-xl font-bold">Контакты</h3>
-          <div className="space-y-2">
-            <p className="flex items-center">
-              <Phone className="mr-2 h-4 w-4" />
-              +7 (495) 888-44-88
-            </p>
-            <Link
-              className="flex items-center"
-              href="https://www.instagram.com/peach.mos/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Instagram className="mr-2 h-4 w-4" />
-              @peach.mos
-            </Link>
-            <Link
-              className="flex items-center"
-              href="mailto:peachbeautymos@gmail.com"
-            >
-              <Mail className="mr-2 h-4 w-4" />
-              peachbeautymos@gmail.com
-            </Link>
+  const [isNavSticky, setIsNavSticky] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-            <Link
-              className="flex items-center"
-              href="https://wa.me/79691387072"
-              target="_blank"
-              rel="noopener noreferrer"
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      setIsNavSticky(offset > 100);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+  return (
+    <div>
+      {" "}
+      {/* Main Navigation */}
+      <nav
+        className={`
+    ${
+      isNavSticky
+        ? "fixed top-0 right-0 left-0 w-full animate-slideDown bg-white z-50 shadow-md"
+        : ""
+    }
+    md:hidden z-50 bg-background flex items-center justify-between p-4 text-gray-700
+  `}
+      >
+        <Image src="/logo.png" alt="logo" width={150} height={150} />
+
+        <button
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          className="z-50"
+        >
+          {isMobileMenuOpen ? (
+            <X className="h-6 w-6" />
+          ) : (
+            <Menu className="h-6 w-6" />
+          )}
+        </button>
+      </nav>
+      {/* Mobile Menu Overlay */}
+      {isMobileMenuOpen && (
+        <div
+          className="fixed z-40 w-screen inset-0 h-screen bg-white md:hidden"
+          onClick={() => setIsMobileMenuOpen(false)}
+        >
+          <div
+            className="flex flex-col items-center justify-center h-full space-y-6"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              className="text-lg font-medium"
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                document
+                  .getElementById("services-section")
+                  .scrollIntoView({ behavior: "smooth" });
+              }}
             >
-              <IoLogoWhatsapp className="mr-2 h-4 w-4" />
-              +7 969 138-70-72
+              УСЛУГИ
+            </button>
+            <button
+              className="text-lg font-medium"
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                document
+                  .getElementById("about-us-section")
+                  .scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              О НАС
+            </button>
+
+            <button
+              className="text-lg font-medium"
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                document
+                  .getElementById("contact-section")
+                  .scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              КОНТАКТЫ
+            </button>
+            <Link
+              href="/prices"
+              className="text-lg font-medium"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              ПРАЙС
             </Link>
           </div>
         </div>
-        <div className="space-y-4 max-w-96">
-          <h3 className="text-xl font-bold">Адрес</h3>
-          <p>МОСКВА, Ермолаевский переулок, 10/7</p>
+      )}
+      {/* Desktop Navigation */}
+      <nav
+        className={`
+    ${
+      isNavSticky
+        ? "fixed top-0 right-0 left-0 w-full animate-slideDown bg-white shadow-md"
+        : ""
+    }
+    hidden md:block z-50 bg-background text-gray-700 
+  `}
+      >
+        <div className="container flex items-center justify-between py-4 max-w-7xl mx-auto">
+          <div className="flex items-center space-x-8">
+            <button
+              className="text-lg font-medium"
+              onClick={() => {
+                document
+                  .getElementById("services-section")
+                  .scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              УСЛУГИ
+            </button>
+            <button
+              className="text-lg font-medium"
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                document
+                  .getElementById("about-us-section")
+                  .scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              О НАС
+            </button>
+          </div>
+
+          <Image src="/logo.png" alt="logo" width={200} height={200} />
+
+          <div className="flex items-center space-x-8">
+            <button
+              className="text-lg font-medium"
+              onClick={() => {
+                document
+                  .getElementById("contact-section")
+
+                  .scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              КОНТАКТЫ
+            </button>
+            <Link href="/prices" className="text-lg font-medium">
+              ПРАЙС
+            </Link>
+          </div>
         </div>
-        <div className="space-y-4 w-fit">
-          <h3 className="text-xl font-bold">Время работы</h3>
-          <p>Пн-Вс 09:00-22:00</p>
-          <p>Без выходных</p>
-        </div>
-      </div>
-    </section>
+      </nav>
+    </div>
   );
 };
 
