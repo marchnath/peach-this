@@ -1,50 +1,56 @@
+//page.js
+
 "use client";
-import React, { useState, useEffect } from "react";
+
+import { useState, useEffect } from "react";
 import { MarqueeDemo } from "./reviews";
 import Fotter from "./fotter";
 import Nav from "./nav";
+import { TbLoaderQuarter } from "react-icons/tb";
 import AboutUs from "./about-us";
 import Services from "./services";
 import Hero2 from "./hero2";
 import Button from "./button";
 
 export default function Component() {
-  const [isNavLoaded, setIsNavLoaded] = useState(false);
-  const [isHeroLoaded, setIsHeroLoaded] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const navTimer = setTimeout(() => {
-      setIsNavLoaded(true);
-    }, 500); // Delay for Nav
+    // Simulate loading time
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000); // Adjust the time as needed
 
-    const heroTimer = setTimeout(() => {
-      setIsHeroLoaded(true);
-    }, 500); // Delay for Hero
-
-    return () => {
-      clearTimeout(navTimer);
-      clearTimeout(heroTimer);
-    };
+    return () => clearTimeout(timer);
   }, []);
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center h-screen">
+        <TbLoaderQuarter className="animate-spin text-6xl text-[#ad9262]" />
+      </div>
+    );
+  }
 
   return (
     <div>
       <div>
-        {isNavLoaded && <Nav />}
+        <Nav />
         {/* Hero Section */}
         {/* <Hero /> */}
-        {isHeroLoaded && <Hero2 />}
+        <Hero2 />
 
-        {isHeroLoaded && <Services />}
-        {isHeroLoaded && <AboutUs />}
+        <Services />
+
+        <AboutUs />
 
         {/* Reviews Section */}
-        {isHeroLoaded && <MarqueeDemo />}
+        <MarqueeDemo />
         {/* Contact Section */}
 
-        {isHeroLoaded && <Fotter />}
+        <Fotter />
       </div>
-      {isHeroLoaded && <Button />}
+      <Button />
     </div>
   );
 }
