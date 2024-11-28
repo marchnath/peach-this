@@ -33,7 +33,19 @@ const Nav = () => {
       >
         {/* Center the logo using absolute positioning */}
         <div className="absolute left-1/2 transform -translate-x-1/2">
-          <Image src="/logo.png" alt="logo" width={130} height={130} />
+          <Image
+            src="/logo.png"
+            alt="logo"
+            width={135}
+            height={50}
+            className="object-contain"
+            priority={true}
+            style={{
+              maxWidth: "100%",
+              height: "auto",
+              aspectRatio: "135/50",
+            }}
+          />
         </div>
 
         {/* Move menu button to the right */}
@@ -140,7 +152,19 @@ const Nav = () => {
             </button>
           </div>
 
-          <Image src="/logo.png" alt="logo" width={200} height={200} />
+          <Image
+            src="/logo.png"
+            alt="logo"
+            width={135}
+            height={50}
+            className="object-contain"
+            priority={true}
+            style={{
+              maxWidth: "100%",
+              height: "auto",
+              aspectRatio: "135/50",
+            }}
+          />
 
           <div className="flex items-center space-x-8">
             <button
