@@ -28,21 +28,27 @@ const Nav = () => {
         ? "fixed top-0 right-0 left-0 w-full animate-slideDown bg-white z-50 shadow-md"
         : ""
     }
-    md:hidden z-50 bg-background flex items-center justify-between p-4 text-gray-700
+    md:hidden z-50 bg-background flex items-center p-4 text-gray-700 relative
   `}
       >
-        <Image src="/logo.png" alt="logo" width={150} height={150} />
+        {/* Center the logo using absolute positioning */}
+        <div className="absolute left-1/2 transform -translate-x-1/2">
+          <Image src="/logo.png" alt="logo" width={130} height={130} />
+        </div>
 
-        <button
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="z-50"
-        >
-          {isMobileMenuOpen ? (
-            <X className="h-6 w-6" />
-          ) : (
-            <Menu className="h-6 w-6" />
-          )}
-        </button>
+        {/* Move menu button to the right */}
+        <div className="ml-auto">
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="z-50"
+          >
+            {isMobileMenuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
+          </button>
+        </div>
       </nav>
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (

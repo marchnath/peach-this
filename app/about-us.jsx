@@ -7,10 +7,10 @@ import Contact from "./contact";
 
 export default function AboutUs() {
   return (
-    <section id="about-us-section" className="mt-28">
-      <div className="text-center  w-full space-y-6 my-8">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl">О НАС</h1>
-        <p className="sm:text-lg max-w-4xl mx-auto">
+    <section id="about-us-section" className="mt-10 sm:mt-28">
+      <div className="text-center  w-full space-y-2 sm:space-y-6 my-8">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl ">О НАС</h1>
+        <p className="sm:text-lg max-w-4xl mx-auto px-4 text-justify sm:text-center">
           Peach — это место, где классика и современные тренды красоты
           сочетаются с профессионализмом в сердце мегаполиса. Мы предлагаем
           пространство для осознанного ухода за собой в условиях постоянной
@@ -92,7 +92,7 @@ const dummyContent = [
     ),
     badge: "New Features",
 
-    image: "/about-us/team.JPG",
+    image: "/about-us/team2.png",
   },
   {
     title: "Уникальность салона Peach",
@@ -107,6 +107,6 @@ const dummyContent = [
       </>
     ),
 
-    image: "/about-us/uniqueness.png",
+    image: "/about-us/support.png",
   },
 ];

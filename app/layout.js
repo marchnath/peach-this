@@ -2,7 +2,10 @@ import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter", // Add this line
+});
 
 const trajan = localFont({
   src: "../public/ofont.ru_Trajan.ttf", // Adjust path based on your file name
@@ -22,7 +25,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${trajan.variable} ${nexaLight.variable}`}>
+      <body className={`${trajan.variable} ${nexaLight.variable} ${inter}`}>
         {children}
       </body>
     </html>

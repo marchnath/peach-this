@@ -116,9 +116,9 @@ const Prices = () => {
       }}
     >
       <div
-        className="h-24 md:h-52 w-full  text-white flex items-center justify-center text-center text-3xl md:text-4xl lg:text-6xl sticky top-0 z-10"
+        className="h-24 md:h-52 w-full  text-white flex items-center justify-center text-center text-2xl md:text-3xl lg:text-5xl sticky top-0 z-10"
         style={{
-          backgroundImage: "url('/banner2.png')",
+          backgroundImage: "url('/price.png')",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
         }}
@@ -128,7 +128,7 @@ const Prices = () => {
             <Image src="/logo.png" alt="logo" width={100} height={100} />
           </a>
         </div>
-        <span className="mt-4"> ПРАЙС-ЛИСТ</span>
+        <span className="mt-4 font-semibold"> ПРАЙС-ЛИСТ</span>
       </div>
 
       <div className="container p-2 md:p-4 items-center  mx-auto max-w-[700px] w-fit">
@@ -137,14 +137,14 @@ const Prices = () => {
             key={index}
             className="border gap-y-4 rounded-xl px-6 md:px-8 mb-8 bg-white pb-6  hover:shadow-2xl"
           >
-            <h2 className="text-xl md:text-3xl font-semibold mt-10 dark:text-white">
+            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold mt-10 dark:text-white">
               {section.section}
             </h2>
             <ul className="mt-4 dark:text-neutral-200 ">
               {section.items.map((item, idx) => (
                 <li
                   key={idx}
-                  className="sm:text-md md:text-xl font-light  py-2"
+                  className="text-sm sm:text-md  xl:text-lg font-light py-1  md:py-1.5"
                 >
                   {item.name}: {item.price}
                 </li>
