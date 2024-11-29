@@ -123,12 +123,12 @@ const Prices = () => {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="text-3xl font-bold  text-[#e5958e] z-50 absolute top-2 left-2">
+        <div className="text-3xl font-bold absolute left-1/2 transform -translate-x-1/2 top-2 z-50">
           <a href="/">
             <Image src="/logo.png" alt="logo" width={100} height={100} />
           </a>
         </div>
-        <span className="mt-4 font-semibold"> ПРАЙС-ЛИСТ</span>
+        <span className="mt-6 sm:mt-2 font-semibold "> ПРАЙС-ЛИСТ</span>
       </div>
 
       <div className="container p-2 md:p-4 items-center  mx-auto max-w-[700px] w-fit">

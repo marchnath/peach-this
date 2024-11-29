@@ -107,6 +107,6 @@ const dummyContent = [
       </>
     ),
 
-    image: "/about-us/support.png",
+    image: "/about-us/unique.png",
   },
 ];

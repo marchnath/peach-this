@@ -7,7 +7,7 @@ const Services = () => {
     { name: "ВОЛОСЫ", image: "/hair.JPG" },
     { name: "НОГТЕВОЙ СЕРВИС", image: "/nails.JPG" },
     { name: "БРОВИ И РЕСНИЦЫ", image: "/eye_brow.JPG" },
-    { name: "МАКИЯЖ", image: "/make_up.JPG" },
+    { name: "МАКИЯЖ", image: "/makeup.JPG" },
 
     { name: "ДЛЯ МУЖЧИН", image: "/for_men.JPG" },
     // { name: "ДЛЯ ДЕТЕЙ", image: "/children.png?height=600&width=400" },
