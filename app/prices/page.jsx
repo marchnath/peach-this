@@ -29,7 +29,8 @@ const Prices = () => {
     {
       section: "Уход для волос",
       items: [
-        { name: "Nashi Argan Filler", price: 7000 },
+       { name: "Nashi Argan Molecular Repair pro", price: 8000 },
+        { name: "Nashi Argan Filler", price: 8000 },
         { name: "Nashi Argan Filler-экспресс", price: 4500 },
         { name: "Nashi Argan базовый", price: 4500 },
         { name: "TOKIO INKARAMI экспресс уход", price: 7500 },
