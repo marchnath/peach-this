@@ -1,9 +1,11 @@
+import React from "react";
+import Fotter from "../fotter";
 import Image from "next/image";
-import Link from "next/link";
-import Footer from "../footer";
-import BookingButton from "../booking-button";
+import { Link } from "lucide-react";
+import Button from "../button";
 
-const priceData = [
+const Prices = () => {
+  const priceData = [
   {
     section: "Укладки",
     items: [
@@ -122,7 +124,6 @@ const priceData = [
   },
 ];
 
-const Prices = () => {
   return (
     <div
       style={{
@@ -131,8 +132,8 @@ const Prices = () => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <header
-        className="h-24 md:h-52 w-full text-white flex items-center justify-center text-center text-2xl md:text-3xl lg:text-5xl sticky top-0 z-10"
+      <div
+        className="h-24 md:h-52 w-full  text-white flex items-center justify-center text-center text-2xl md:text-3xl lg:text-5xl sticky top-0 z-10"
         style={{
           backgroundImage: "url('/price.png')",
           backgroundSize: "cover",
@@ -140,41 +141,40 @@ const Prices = () => {
         }}
       >
         <div className="text-3xl font-bold absolute left-1/2 transform -translate-x-1/2 top-2 z-50">
-          <Link href="/">
-            <Image
-              src="/logo.png"
-              alt="Peach Beauty Salon"
-              width={100}
-              height={100}
-            />
-          </Link>
+          <a href="/">
+            <Image src="/logo.png" alt="logo" width={100} height={100} />
+          </a>
         </div>
-        <span className="mt-6 sm:mt-2 font-semibold">ПРАЙС-ЛИСТ</span>
-      </header>
-      <div className="container p-2 md:p-4 items-center mx-auto max-w-[700px] w-fit">
+        <span className="mt-6 sm:mt-2 font-semibold "> ПРАЙС-ЛИСТ</span>
+      </div>
+
+      <div className="container p-2 md:p-4 items-center  mx-auto max-w-[700px] w-fit">
         {priceData.map((section, index) => (
           <div
             key={index}
-            className="border gap-y-4 rounded-xl px-6 md:px-8 mb-8 bg-white pb-6 hover:shadow-2xl"
+            className="border gap-y-4 rounded-xl px-6 md:px-8 mb-8 bg-white pb-6  hover:shadow-2xl"
           >
             <h2 className="text-lg sm:text-xl md:text-2xl font-semibold mt-10 dark:text-white">
               {section.section}
             </h2>
-            <ul className="mt-4 dark:text-neutral-200">
+            <ul className="mt-4 dark:text-neutral-200 ">
               {section.items.map((item, idx) => (
                 <li
                   key={idx}
-                  className="text-sm sm:text-md xl:text-lg font-light py-1 md:py-1.5"
+                  className="text-sm sm:text-md  xl:text-lg font-light py-1  md:py-1.5"
                 >
                   {item.name}: {item.price}
                 </li>
               ))}
             </ul>
+            {/* <hr className="border-2 rounded-full my-10 w-72 border-yellow-700" /> */}
           </div>
         ))}
       </div>
-      <Footer />
-      <BookingButton />
+      {/* <div className="bg-stone-800"> */}
+      <Fotter />
+      <Button />
+      {/* </div> */}
     </div>
   );
 };
